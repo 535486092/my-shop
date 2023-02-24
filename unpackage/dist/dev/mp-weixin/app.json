@@ -5,11 +5,19 @@
     "pages/cate/cate",
     "pages/my/my"
   ],
-  "subPackages": [],
+  "subPackages": [
+    {
+      "root": "subpkg",
+      "pages": [
+        "goods_detail/goods_detail",
+        "goods_list/goods_list"
+      ]
+    }
+  ],
   "window": {
-    "navigationBarTextStyle": "white",
+    "navigationBarTextStyle": "black",
     "navigationBarTitleText": "优购",
-    "navigationBarBackgroundColor": "#000000",
+    "navigationBarBackgroundColor": "#d81e06",
     "backgroundColor": "#FFFFFF"
   },
   "tabBar": {
