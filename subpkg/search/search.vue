@@ -30,7 +30,7 @@
 				kw: '', //搜索框的内容
 				serachList: [], //搜索结果
 				timer: null, //记录定时器编号
-				historyList: ['a', 'b', 'c']
+				historyList: []
 			};
 		},
 		methods: {
