@@ -1,5 +1,7 @@
 <template>
 	<view>
+		<!-- 使用自定义的搜索组件 -->
+		<my-search bgcolor='#c00000' radius="20"></my-search>
 		<!-- 分类导航 -->
 		<view class="scroll-view-container">
 			<!-- 左侧一级分类 -->
@@ -42,7 +44,7 @@
 		onLoad() {
 			this.getCataList()
 			const windowInfo = uni.getWindowInfo()
-			this.wh = windowInfo.windowHeight
+			this.wh = windowInfo.windowHeight - 50
 		},
 		methods: {
 			// 选中项改变的事件处理函数
@@ -62,6 +64,7 @@
 				this.cateLevel2 = res.message[this.active].children
 
 			},
+
 		}
 	}
 </script>
