@@ -57,6 +57,7 @@
 				this.saveSearchHistory()
 
 			},
+			//点击搜索列表跳转只商品详情页
 			gotoDetail(id) {
 				uni.navigateTo({
 					url: '/subpkg/goods_detail/goods_detail?good_id=' + id

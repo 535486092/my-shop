@@ -1,32 +1,28 @@
 {
 	"pages": [{
-			"path": "pages/home/home",
-			"style": {
-				"enablePullDownRefresh": false
-			}
-
+		"path": "pages/home/home",
+		"style": {
+			"enablePullDownRefresh": false
+		}
+	}, {
+		"path": "pages/cart/cart",
+		"style": {
+			"enablePullDownRefresh": false
 		}
 
-		, {
-			"path": "pages/cart/cart",
-			"style": {
-				"enablePullDownRefresh": false
-			}
-
-		}, {
-			"path": "pages/cate/cate",
-			"style": {
-				"enablePullDownRefresh": false
-			}
-
-		}, {
-			"path": "pages/my/my",
-			"style": {
-				"enablePullDownRefresh": false
-			}
-
+	}, {
+		"path": "pages/cate/cate",
+		"style": {
+			"enablePullDownRefresh": false
 		}
-	],
+
+	}, {
+		"path": "pages/my/my",
+		"style": {
+			"enablePullDownRefresh": false
+		}
+
+	}],
 	"subPackages": [{
 		"root": "subpkg",
 		"pages": [{
