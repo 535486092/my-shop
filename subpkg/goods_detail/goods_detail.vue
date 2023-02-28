@@ -21,7 +21,7 @@
 				</view>
 			</view>
 			<!-- 运费 -->
-			<view class="yf">快递：免运费</view>
+			<view class="yf">快递：免运费---{{cart.lenght}}</view>
 		</view>
 		<!-- 商品详情信息 -->
 		<rich-text :nodes="goodsInfo.goods_introduce"></rich-text>
@@ -39,6 +39,11 @@
 </template>
 
 <script>
+	import {
+		mapState,
+		mapMutations,
+		mapGetters
+	} from 'vuex'
 	export default {
 		data() {
 			return {
@@ -104,7 +109,35 @@
 						url: '/pages/cart/cart'
 					})
 				}
-			}
+			},
+			//右侧点击事件
+			buttonClick(e) {
+				if (e.content.text === '加入购物车') {
+					const goods = {
+						goods_id: this.goodsInfo.goods_id,
+						goods_name: this.goodsInfo.goods_name,
+						goods_price: this.goodsInfo.goods_price,
+						goods_count: 1,
+						goods_small_logo: this.goodsInfo.goods_small_logo,
+						goods_state: true
+					}
+					this.addGoodsToCart(goods)
+				}
+			},
+			...mapMutations('m_cart', ['addGoodsToCart'])
+		},
+		computed: {
+			...mapState('m_cart', ['cart']),
+			...mapGetters('m_cart', ['total'])
+		},
+		watch: {
+			total: {
+				handler(newTotal) {
+					this.options[1].info = newTotal
+				},
+				immediate: true
+			},
+
 		}
 	}
 </script>
